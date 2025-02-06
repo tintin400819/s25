@@ -10,7 +10,7 @@ import subprocess
 from datetime import datetime, timedelta
 
 # Watermark verification
-CREATOR = "This File Is Made By @Ayush143"
+CREATOR = "This File Is Made By @SahilModzOwner"
 BotCode = "fc9dc7b267c90ad8c07501172bc15e0f10b2eb572b088096fb8cc9b196caea97"
 
 def verify():
